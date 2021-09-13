@@ -48,7 +48,6 @@ class ToDo {
     required this.color, });
 
 
-
   ToDo copy({
     int? id,
     String? title,
