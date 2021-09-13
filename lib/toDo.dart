@@ -47,7 +47,6 @@ class ToDo {
     required this.alarm,
     required this.color, });
 
-    // this.onAlarm = onAlarm;
 
 
   ToDo copy({
@@ -80,7 +79,6 @@ class ToDo {
     this.isFinalised = false;
     this.alarm = false;
     this.color = Colors.white;
-    // this.onAlarm = false;
   }
 
   Map<String, Object?> toJson() => {
@@ -169,12 +167,7 @@ class ToDo {
   int get getId{
     return id;
   }
-  // bool get getAlarm{
-  //   return onAlarm;
-  // }
 
-  // Implement toString to make it easier to see information about
-  // each dog when using the print statement.
   @override
   String toString() {
     return 'ToDo{id: $id, title: $title, desc: $desc,date: $date, time : $time, isFinalised : $isFinalised, alarm : $alarm, Color : $color}';

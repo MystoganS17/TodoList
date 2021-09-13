@@ -167,7 +167,6 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Future updateToDo(ToDo toDo) async {
-
     await ToDoDatabase.instance.update(toDo);
   }
 

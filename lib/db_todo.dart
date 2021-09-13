@@ -45,14 +45,6 @@ CREATE TABLE $tableToDo (
 
   Future<ToDo> create(ToDo toDo) async {
     final db = await instance.database;
-
-    // final json = note.toJson();
-    // final columns =
-    //     '${ToDoFields.title}, ${ToDoFields.description}, ${ToDoFields.time}';
-    // final values =
-    //     '${json[ToDoFields.title]}, ${json[ToDoFields.description]}, ${json[ToDoFields.time]}';
-    // final id = await db
-    //     .rawInsert('INSERT INTO table_name ($columns) VALUES ($values)');
     final id = await db.insert(tableToDo, toDo.toJson());
     return toDo.copy(id: id);
   }
@@ -77,7 +69,7 @@ CREATE TABLE $tableToDo (
   Future<List<ToDo>> readAllToDo() async {
     final db = await instance.database;
 
-    final orderBy = '${ToDoFields.date} ASC';
+    final orderBy = '${ToDoFields.id} ASC';
     // final result =
     //     await db.rawQuery('SELECT * FROM $tableToDo ORDER BY $orderBy');
 
